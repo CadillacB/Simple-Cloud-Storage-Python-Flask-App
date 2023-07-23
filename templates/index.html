@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my Cloud Storage App</title>
+</head>
+<body>
+    <h1>Welcome to my Cloud Storage App</h1>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload to Cloud Storage">
+    </form>
+    <h2>Current Files:</h2>
+    <ul>
+        {% for blob in blobs %}
+            <li>
+                <a href="{{ blob.public_url }}">{{ blob.name }}</a>
+                <a href="{{ url_for('delete', filename=blob.name) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
