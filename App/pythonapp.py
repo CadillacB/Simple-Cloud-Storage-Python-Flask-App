@@ -5,8 +5,8 @@ import os
 app = Flask(__name__,template_folder='templates')
 
 # Set your GCP project ID and bucket name
-project_id = "pythonapp-393704"
-bucket_name = "pythontestbucket25"
+project_id = "Yourprojectid"
+bucket_name = "Yourbucket"
 bucket = storage.Client(project=project_id).bucket(bucket_name)
 
 
