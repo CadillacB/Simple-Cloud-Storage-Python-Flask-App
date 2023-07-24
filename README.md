@@ -1,7 +1,10 @@
 
 # Simple-Cloud-Storage-Python-Flask-App
 
-This repo uses python and Flask to create a simple web app that allows you to upload and delete files using an ultra simple UI.
+![image](https://github.com/CadillacB/Simple-Cloud-Storage-Python-Flask-App/assets/140217233/cae24ecd-44b7-4c3b-a07c-feb5e444fff1)
+
+
+This repo uses Python and Flask to create a simple web app that allows you to upload and delete files using an ultra-simple UI.
 
 ## Authors
 
