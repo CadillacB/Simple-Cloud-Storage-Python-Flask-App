@@ -1,5 +1,5 @@
 
-# Simple-Cloud-Storage-Python-Flask-App
+# Simple-Cloud-Storage-Python-Flask-App-Local-Development
 
 This repo uses Python and Flask to create a simple web app that allows you to upload and delete files using an ultra-simple UI leveraging Google Cloud Storage. Running this app locally allows us to leverage application default credentials to authenticate the application in order to leverage Google Cloud storage APIs.
 
