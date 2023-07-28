@@ -4,19 +4,19 @@ import os
 
 app = Flask(__name__,template_folder='templates')
 
-# Set your GCP project ID and bucket name
+# Add your GCP project ID and bucket name below
 project_id = "Yourprojectid"
 bucket_name = "Yourbucket"
 bucket = storage.Client(project=project_id).bucket(bucket_name)
 
-
+#list files
 @app.route("/")
 def index():
     # List files in the bucket
     blobs = bucket.list_blobs()
     return render_template("index.html", blobs=blobs)
 
-
+#upload files
 @app.route("/upload", methods=["POST"])
 def upload():
     if request.method == "POST" and "file" in request.files:
@@ -25,6 +25,7 @@ def upload():
         blob.upload_from_file(file)
     return redirect(url_for("index"))
 
+#delete files
 @app.route("/delete/<filename>")
 def delete(filename):
     blob = bucket.blob(filename)
